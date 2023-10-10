@@ -1,0 +1,31 @@
+.section.owner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--index) * 2);
+    background-color: var(--color-black);
+    color: #fff;
+}
+.owner__info {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 2);
+}
+.owner__info h2 {
+    font-size: calc(var(--index) * 1.8);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.owner__info p {
+    font-size: calc(var(--index) * 0.8);
+    font-weight: 200;
+}
+.owner__info img {
+    width: 300px;
+}
+.owner__info button {
+    width: 300px;
+}
+.owner__photo {
+    background-color: #474747;
+}

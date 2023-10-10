@@ -1,0 +1,18 @@
+.badges {
+    min-height: 100%;
+    background-color: var(--color-black);
+    padding: 8vw 5vw;
+    padding-bottom: 3vw;
+    display: flex;
+    align-items: center;
+}
+.badges__list {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: calc(var(--index) * 3);
+    align-items: center;
+}
+.badges__list img {
+    width: 150px;
+}

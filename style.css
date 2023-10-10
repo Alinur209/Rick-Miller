@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+@import "styles/header.css";
+@import "styles/hero.css";
+@import "styles/badges.css";
+@import "styles/reviews.css";
+@import "styles/owner.css";
+@import "styles/services.css";
+@import "styles/portfolio.css";
+@import "styles/nextdoor.css";
+@import "styles/areas.css";
+@import "styles/action-form.css";
+@import "styles/footer.css";
+@import "styles/modal.css";
+
+:root {
+	--index: calc(1vw + 1vh);
+	--color-red: #e20429;
+	--color-red-hover: rgb(184, 0, 31);
+	--color-red-gradient: linear-gradient(270deg, #FF002A 0%, #CD0425 90.22%);
+	--color-red-gradient-hover: linear-gradient(270deg, #CD0425 0%, #FF002A 89.53%);
+	--color-yellow: #F6C336;
+	--color-yellow-hover: #e1ab16;
+	--color-gray: #6F6F6F;
+	--color-black: #252525;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	transition-duration: .2s;
+}
+body::-webkit-scrollbar {
+    display: none;
+	color: var(--color-black);
+}
+.logo {
+    width: 100px;
+}
+
+.red {
+	color: var(--color-red);
+}
+
+.red-button {
+	width: fit-content;
+	cursor: pointer;
+    font-size: 20px;
+    padding: 10px calc(var(--index) * 2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	background: var(--color-red-gradient);
+    border: 1px solid var(--color-red);
+    font-weight: bold;
+    color: #fff;
+}
+
+.red-button:hover {
+    background: var(--color-red-gradient-hover);
+}
+
+.excerpt__link {
+    color: var(--color-yellow);
+	text-decoration: underline;
+}
+
+
+
+/* Section  */
+
+.section {
+	padding: 5vw;
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--index) * 2);
+}
+.section__header {
+	text-align: center;
+}
+.section__title {
+	font-size: calc(var(--index) * 2);
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.section__sub-title {
+	font-size: calc(var(--index));
+	text-transform: uppercase;
+	color: var(--color-red);
+	font-weight: 200;
+}
+

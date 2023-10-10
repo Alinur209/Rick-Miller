@@ -1,0 +1,28 @@
+.section.nextdoor {
+    background-color: var(--color-black);
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr;
+    padding: 3vw 5vw;
+    align-items: center;
+}
+.nextdoor__title {
+    display: flex;
+    flex-direction: column;
+}
+.nextdoor__title h2 {
+    font-size: calc(var(--index) * 2);
+    color: #fff;
+    text-transform: uppercase;
+}
+.nextdoor__title a img {
+    width: 100%;
+}
+.nextdoor .quote-icon {
+    width: calc(var(--index) * 6);
+    margin: 0 auto;
+}
+.nextdoor__review {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 200;
+}

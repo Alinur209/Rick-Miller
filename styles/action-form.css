@@ -1,0 +1,20 @@
+.section.action {
+    background-color: var(--color-black);
+    color: #fff;
+    gap: 20px;
+    padding: 3vw 5vw;
+}
+.action__title {
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 2);
+}
+.action__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.action__form .form__field {
+    background-color: #595959;
+    color: #fff;
+}

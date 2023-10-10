@@ -1,0 +1,81 @@
+.reviews__slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.swiper.swiper_reviews {
+    width: 100%;
+}
+.swiper.swiper_reviews .swiper-wrapper {
+    padding: 20px 0;
+}
+
+.swiper-slide.reviews__review.review {
+    border: 1px solid #e3e3e3;
+    list-style: none;
+}
+.reviews__review a {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+/* Buttons  */
+
+.review__arrow {
+    width: calc(var(--index) * 2);
+    height: calc(var(--index) * 2);
+    cursor: pointer;
+}
+.review__arrow_right {
+    transform: rotate(90deg);
+}
+.review__arrow_left {
+    transform: rotate(-90deg);
+}
+
+/* Body  */
+
+.review__header {
+    display: flex;
+    gap: 20px;
+}
+.review__header .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.review__header .review__author {
+    width: calc(var(--index) * 3);
+    height: calc(var(--index) * 3);
+    border-radius: calc(var(--index) * 3);
+    object-fit: cover;
+    user-select: none;
+}
+
+.review__header .info div {
+    display: flex;
+    flex-direction: column;
+}
+.review__header .info .source-logo {
+    width: calc(var(--index) * 2);    
+    object-fit: contain;
+
+}
+.review__body {
+    padding: 10px 0;
+    overflow-x: auto;
+}
+.review__date {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+.review__typo {
+    font-size: calc(var(--index) * 0.7);
+}

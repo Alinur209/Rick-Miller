@@ -110,3 +110,23 @@
     height: 100%;
     object-fit: contain;
 }
+
+@media (max-width: 600px) {
+    .modal__body {
+        margin: 100px auto;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .modal__form {
+        padding: 8px;
+    }
+
+    .modal__header h2 {
+        font-size: 20px;
+    }
+    
+    .modal__form .form__field_submit {
+        font-size: 16px;
+    }
+}

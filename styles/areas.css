@@ -30,10 +30,6 @@
 .areas__area a:hover {
     text-decoration: underline;
 }
-
-.areas__title {
-    font-style: italic;
-}
 /* MAP  */
 
 .areas__map {
@@ -45,4 +41,35 @@
 .areas__map {
     width: 100% !important;
     height: 100% !important;
+}
+
+@media (max-width: 868px ) {
+    .section.areas {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .areas__map {
+        order: -1;
+    }
+    
+    .areas__map iframe {
+        height: 500px;
+    }
+
+    .areas__area a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px ) {
+    .areas__content {
+		padding: 12px 6px;
+    }
+}
+
+@media (max-width: 390px ) {
+    .areas__area a {
+        font-size: 14px;
+    }
 }

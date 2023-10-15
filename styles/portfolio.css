@@ -92,3 +92,53 @@
     background: var(--color-red);
     color: #fff;
 }
+
+@media (max-width: 868px) {
+    .portfolio__item {
+        height: 300px;
+    }
+
+    .red-button.red-button__gallery {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio__navigation li {
+        font-size: 16px;
+        height: 40px;
+        padding: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }   
+
+    .portfolio__navigation {
+        gap: 10px;
+    }
+    .portfolio__list {
+        grid-template-columns: 1fr 1fr;
+    }    
+    
+    .portfolio__item {
+        height: 220px;
+    }
+
+    .portfolio__tag {
+        font-size: 12px;
+        padding: 3px 6px;
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 390px) {
+    .portfolio__item {
+        height: 200px;
+    }
+
+    .portfolio__tag {
+        font-size: 10px;
+    }
+}

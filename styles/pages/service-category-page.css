@@ -1,0 +1,34 @@
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(var(--index));
+}
+.service__card {
+    width: 100%;
+    height: 520px;
+    display: grid;
+    grid-template-rows: 45% 55%;
+    box-shadow: 0 0 15px #e3e3e3;
+}
+.service__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service__card .body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+}
+.service__card .body .service__name {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+}
+.service__card .body .service__excerpt {
+    color: var(--color-gray);
+}
+.service__card .body a {
+    align-self: flex-end;
+}

@@ -68,3 +68,19 @@ navItems.forEach(item => {
     })
 })
 
+// Burger 
+
+const burgerBtn = document.querySelector(".burger-btn")
+const burgerIcon = burgerBtn.querySelector("img")
+const headerNav = document.querySelector(".header__nav")
+
+burgerBtn.addEventListener("click", () => {
+
+    headerNav.classList.toggle("active")
+
+    if(headerNav.classList.contains("active")) {
+        burgerIcon.src = "media/header/burger-opened.png"
+    }else {
+        burgerIcon.src = "media/header/burger.png"
+    }
+})

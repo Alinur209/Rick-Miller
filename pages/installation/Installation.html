@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Services</title>
+
+    <!-- swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styles/pages/service-category-page.css">
+    <script defer src="../../script/index.js"></script>
+    <script defer src="../../script/slider.js"></script>
+    <script defer src="../../script/form.js"></script>
+    <script defer src="../../script/portolio.js"></script>
+    <script defer src="../../script/faq.js"></script>
+</head>
+
+<body>
+
+    <!-- Header  -->
+
+    <div class="modal modal_media">
+        <div class="modal__body">
+            <span class="closeBtn">&times;</span>
+        </div>
+    </div>
+
+    <div class="modal modal_thank">
+        <div class="modal__body">
+            <span class="closeBtn">&times;</span>
+            <h2>Thank you! We recieved your application.</h2>
+            <p>We will contact you soon!</p>
+        </div>>
+    </div>
+
+    <div class="modal modal_quote">
+        <div class="modal__body">
+            <div class="modal__header">
+                <h2>Get a free quote</h2>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <form id="quote-form" class="modal__form">
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Name" name="name" />
+                    <img src="../../media/icons/user.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Phone" name="phone" />
+                    <img src="../../media/icons/phone-call (5).png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Address" name="address" />
+                    <img src="../../media/icons/pin.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Message" name="message" />
+                    <img src="../../media/icons/email-red.png" width="32" alt="field-icon">
+                </div>
+                <button class="form__field form__field_submit" type="submit" name="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header__block header__block_logo">
+            <a style="z-index: 2;" href="../../index.html">
+                <img src="../../media/logo.png" class="logo logo__header" alt="logo">
+            </a>
+        </div>
+        <div class="header__block header__block_center">
+            <div class="header__top">
+                <a href="mailto:rickmillerdenver@comcast.net" class="header__top_item header__email">
+                    <div>
+                        <img src="../../media/icons/mail.svg" alt="email-icon">
+                    </div>
+                    <p>rickmillerdenver@comcast.net</p>
+                </a>
+                <a href="#">
+                    <img src="../../media/trust-badges/accredited-badge.svg" alt="trust-badge">
+               </a>
+            </div>
+            <ul class="header__nav nav">
+                <li class="nav__item active" data-anchor="hero"><a href="#">Home</a></li>
+                <li class="nav__item" data-anchor="owner"><a href="#">About</a></li>
+                <li class="nav__item nav__item_services" data-anchor="services">
+                    <a href="#">
+                        Services
+                        <img src="../../media/icons/down-arrow.svg" alt="arrow-down-icon">
+                    </a>
+
+                    <ul class="services">
+                        <li class="service">
+                            Installation
+                            <img src="../../media/icons/white-arrow.png" alt="arrow-right-icon">
+
+                            <ul>
+                                <li class="service"><a href="#">Fence installation</a></li>
+                                <li class="service"><a href="#">Gate installation</a></li>
+                                <li class="service"><a href="#">Gazebo installation</a></li>
+                            </ul>
+                        </li>
+                        <li class="service">
+                            Landscaping
+                            <img src="../../media/icons/white-arrow.png" alt="arrow-right-icon">
+
+                            <ul>
+                                <li class="service"><a href="#">Patio installation</a></li>
+                                <li class="service"><a href="#">Garden design</a></li>
+                                <li class="service"><a href="#">Hardscaping</a></li>
+                            </ul>
+                        </li>
+                        <li class="service">
+                            Roofing
+                            <img src="../../media/icons/white-arrow.png" alt="arrow-right-icon">
+
+                            <ul>
+                                <li class="service"><a href="#">Roof installation</a></li>
+                                <li class="service"><a href="#">Roof repair</a></li>
+                                <li class="service"><a href="#">Roof maintenance</a></li>
+                            </ul>
+                        </li>
+                        <li class="service">
+                            Flooring
+                            <img src="../../media/icons/white-arrow.png" alt="arrow-right-icon">
+
+                            <ul>
+                                <li class="service"><a href="#">Floor installation</a></li>
+                                <li class="service"><a href="#">Floor repair</a></li>
+                                <li class="service"><a href="#">Floor refinishing</a></li>
+                            </ul>
+                        </li>
+                        <li class="service">
+                            Remodelling
+                            <img src="../../media/icons/white-arrow.png" alt="arrow-right-icon">
+
+                            <ul>
+                                <li class="service"><a href="#">Bathroom Remodelling</a></li>
+                                <li class="service"><a href="#">Kitchen Remodelling</a></li>
+                                <li class="service"><a href="#">Room Remodelling</a></li>
+                                <li class="service"><a href="#">Closet Remodelling</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-anchor="portfolio"><a href="#">Our work</a></li>
+                <li class="nav__item" data-anchor="reviews"><a href="#">Testimonials</a></li>
+                <li class="nav__item" data-anchor="footer"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="header__block header__block_phone">
+            <a href="tel:(303) 909-7719">
+                <div class="icon">
+                    <img src="../../media/icons/phone.svg" alt="phone-icon">
+                </div>
+                <div class="typo">
+                    <p>Call us today!</p>
+                    <p class="header__phone">(303) 909-7719</p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero__content">
+            <div class="hero__typo">
+                <div class="hero__typo_text">
+                    <h1 class="hero__meta-tag">Fence and Gate Installation Services in denver</h1>
+                    <h2 class="hero__headline">we build anything <br> <span class="red">you can dream of</span></h2>
+                    <h3 class="hero__sub-headline">Tested by tme & Trusted by people</h3>
+                    <p class="hero__description">
+                        We are Full Service General Contracting Company.
+                        With 22 years of experience, we provide insured contracting services to residential projects of
+                        any size.
+                    </p>
+                </div>
+                <div class="hero__reviews">
+                    <a href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076"
+                        class="hero__review hero__review_first">
+                        <img src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                        <div class="hero__review_typo">
+                            <p>Thumbstack</p>
+                            <div>
+                                <span>4.7</span>
+                                <img src="../../media/hero/5-stars.svg" alt="5-stars">
+                            </div>
+                            <p>Based on 27 reviews</p>
+                        </div>
+                    </a>
+                    <a href="https://nextdoor.com/pages/rdm-construction-denver-co" class="hero__review">
+                        <img src="../../media/nextdoor-logo.png" alt="thumbstack-logo">
+                        <div class="hero__review_typo">
+                            <p>Nextdoor</p>
+                            <div>
+                                <span>5</span>
+                                <img src="../../media/hero/5-stars.svg" alt="5-stars">
+                            </div>
+                            <p>Based on 5 reviews</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hero__buttons">
+                    <button class="quoteBtn hero__button hero__button_quote">GET A FREE QUOTE</button>
+                    <button class="hero__button hero__button_services nav__item" data-anchor="services">OUR SERVICES</button>
+                </div>
+            </div>
+            <div class="hero__media">
+                <div class="hero__author">
+                    <div class="hero__author_description-box">
+                        <img class="author__photo" src="../../media/hero/author.png" alt="author-photo">
+                        <div class="author-box-description">
+                            <img src="../../media/hero/author-icon.svg" width="120" alt="author__icon"
+                                class="author__icon">
+
+                            <h3 class="author__name">Rick miller - owner</h3>
+                            <p class="author__vision">
+                                I am passionate about high quality craftsmanship and enjoy sharing the satisfaction of a
+                                job
+                                well done with my clients.
+                            </p>
+                            <img class="author-sign" src="../../media/hero/author-sign.svg" alt="author-sign">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__portfolio">
+                    <img class="red-arrow red-arrow_up" src="../../media/icons/red-arrow.svg" alt="red-arrow">
+
+                    <div class="swiper swiper_hero">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../media/portfolio/Installation/4.webp" alt="red-arrow">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../media/portfolio/Installation/2.webp" alt="red-arrow">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../media/portfolio/Installation/3.webp" alt="red-arrow">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../media/portfolio/Installation/4.webp" alt="red-arrow">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../media/portfolio/Installation/gazebo.webp" alt="red-arrow">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../media/portfolio/Installation/9.webp" alt="red-arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="red-arrow red-arrow_down" src="../../media/icons/red-arrow.svg" alt="red-arrow">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__form">
+            <div class="form__title">
+                <h2>Book a free estimate now!</h2>
+            </div>
+            <form id="quote-form">
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Name" name="name" />
+                    <img src="../../media/icons/user.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Phone" name="phone" />
+                    <img src="../../media/icons/phone-call (5).png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Address" name="address" />
+                    <img src="../../media/icons/pin.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Message" name="message" />
+                    <img src="../../media/icons/email-red.png" width="32" alt="field-icon">
+                </div>
+                <button class="form__field form__field_submit" type="submit" name="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="badges">
+        <div class="badges__list">
+            
+            <img src="../../media/trust-badges/quality.svg" alt="trust-badge">
+            <img src="../../media/trust-badges/insurance.svg" alt="trust-badge">
+            <img src="../../media/trust-badges/experience.svg" alt="trust-badge">
+            <img src="../../media/trust-badges/certainteed.svg" alt="trust-badge">
+            <img src="../../media/trust-badges/thumbstack.svg" alt="trust-badge">
+        </div>
+    </div>
+
+    <!-- Header end  -->
+
+    <div class="section services">
+        <div class="section__header">
+            <h2 class="section__title"><span class="red">Fence & gate</span> <br> Installation Services</h2>
+        </div>
+
+        <ul class="services__list">
+            <li class="service__card">
+                <img class="service__thumbnail" src="../../media/services/fencing.png" alt="fence-icon">
+                <div class="body">
+                    <div class="typo">
+                        <h3 class="service__name">Fence Installation</h3>
+                        <p class="service__excerpt">
+                            With the help of our skilled fence installation service, you can completely transform your
+                            outdoor area and give your property the ideal balance of security and beauty.
+                        </p>
+                    </div>
+
+                    <a href="installation-services/fence.html">
+                        <button class="red-button">Details</button>
+                    </a>
+                </div>
+            </li>
+
+            <li class="service__card">
+                <img class="service__thumbnail" src="../../media/services/gate.webp" alt="fence-icon">
+                <div class="body">
+                    <div class="typo">
+                        <h3 class="service__name">Gate Installation</h3>
+                        <p class="service__excerpt">
+                            With our experienced gate installation service, you can improve the visual appeal and
+                            security of your property and create an unforgettable first impression.
+                        </p>
+                    </div>
+
+                    <a href="installation-services/gate.html">
+                        <button class="red-button">Details</button>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer  -->
+
+
+    <div class="section reviews">
+        <div class="section__header">
+            <h2 class="section__title">
+                <span class="red">What people say</span>
+                <br>
+                about us
+            </h2>
+        </div>
+
+        <div class="reviews__slider">
+            <img class="review__arrow review__arrow_left" src="../../media/icons/red-arrow.svg" alt="left-arrow">
+
+            <div class="swiper swiper_reviews">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide reviews__review review">
+                        <a
+                            href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076">
+                            <div class="review__header">
+                                <img class="review__author" src="../../media/reviews/2.webp" alt="review__author-icon">
+                                <div class="info">
+                                    <div>
+                                        <h3>Bradley Y.</h3>
+                                        <img src="../../media/hero/5-stars.svg" alt="5-stars-icon">
+                                        <p class="review__date">Aug 10, 2021</p>
+                                    </div>
+                                    <img class="source-logo" src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p class="review__typo">
+                                    Rick was easy to work with. He does quality work, and quality work is hard to find.
+                                    I
+                                    would
+                                    recommend his services to anyone in need.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="swiper-slide reviews__review review">
+                        <a
+                            href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076">
+                            <div class="review__header">
+                                <img class="review__author" src="../../media/reviews/3.webp" alt="review__author-icon">
+                                <div class="info">
+                                    <div>
+                                        <h3>Sherrie R.</h3>
+                                        <img src="../../media/hero/5-stars.svg" alt="5-stars-icon">
+                                        <p class="review__date">Jun 21, 2019</p>
+                                    </div>
+                                    <img class="source-logo" src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p class="review__typo">
+                                    Great Experience. My custom gate and partial new fence look amazing! I can't say
+                                    enough
+                                    about Rick's work habits, professionalism and excellent craftsmanship!
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="swiper-slide reviews__review review">
+                        <a
+                            href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076">
+                            <div class="review__header">
+                                <img class="review__author" src="../../media/reviews/4.png" alt="review__author-icon">
+                                <div class="info">
+                                    <div>
+                                        <h3>Shelby F.</h3>
+                                        <img src="../../media/hero/5-stars.svg" alt="5-stars-icon">
+                                        <p class="review__date">Jun 19, 2019</p>
+                                    </div>
+                                    <img class="source-logo" src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p class="review__typo">
+                                    Rick did an awesome job replacing our front porch beam! He was there when he said he
+                                    was
+                                    and made sure the job was don’t right. I would definitely use Rick again for future
+                                    projects.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="swiper-slide reviews__review review">
+                        <a
+                            href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076">
+                            <div class="review__header">
+                                <img class="review__author" src="../../media/reviews/unknown.png" alt="review__author-icon">
+                                <div class="info">
+                                    <div>
+                                        <h3>Patrick Q.</h3>
+                                        <img src="../../media/hero/5-stars.svg" alt="5-stars-icon">
+                                        <p class="review__date">Aug 29, 2016</p>
+                                    </div>
+                                    <img class="source-logo" src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p class="review__typo">
+                                    I hired Rick to build a privacy fence in my backyard. The fence looks great, was
+                                    done quickly, and Rick was always great communicating with me. I will hire him for
+                                    future projects as well.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="swiper-slide reviews__review review">
+                        <a
+                            href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076">
+                            <div class="review__header">
+                                <img class="review__author" src="../../media/reviews/1.webp" alt="review__author-icon">
+                                <div class="info">
+                                    <div>
+                                        <h3>Lauren V.</h3>
+                                        <img src="../../media/hero/5-stars.svg" alt="5-stars-icon">
+                                        <p class="review__date">Sep 22, 2017</p>
+                                    </div>
+                                    <img class="source-logo" src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p class="review__typo">
+                                    Great Handyman!
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="swiper-slide reviews__review review">
+                        <a
+                            href="https://www.thumbtack.com/co/denver/fences/rdm-construction/service/260029899027023076">
+                            <div class="review__header">
+                                <img class="review__author" src="../../media/reviews/unknown.png" alt="review__author-icon">
+                                <div class="info">
+                                    <div>
+                                        <h3>John D.</h3>
+                                        <img src="../../media/hero/5-stars.svg" alt="5-stars-icon">
+                                        <p class="review__date">Sep 11, 2017</p>
+                                    </div>
+                                    <img class="source-logo" src="../../media/thumbstack-logo.png" alt="thumbstack-logo">
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p class="review__typo">
+                                    I highly recommend Rick (RDM Construction). I wouldn't hesitate to hire him again
+                                    (which I'm doing for another project). His professionalism and quality of work
+                                    stands out even more so given that most contractors I contacted didn't even return
+                                    calls. We quickly scheduled a meeting to review what I wanted done (locating and
+                                    fixing leaks; repairing damaged window/door frames; installing ceiling exhaust fan).
+                                    His written estimate was reasonable and he was able to schedule me in the following
+                                    week. During the job, he identified and repaired a few additional trouble spots,
+                                    showing pictures of before/after shots so I could see the work done on roof/side of
+                                    house. He followed up to see if there were any issues.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <img class="review__arrow review__arrow_right" src="../../media/icons/red-arrow.svg" alt="right-arrow">
+        </div>
+    </div>
+
+    <div class="section portfolio">
+        <div class="section__header">
+            <p class="section__sub-title">What you can expect</p>
+            <h2 class="section__title">Our <span class="red">work</span></h2>
+        </div>
+
+        <div class="portfolio__content">
+
+            <ul class="portfolio__navigation">
+                <li class="portfolio__category active" data-category="Installation">All</li>
+                <li class="portfolio__category" data-tag="Fence Installation">Fence Installation</li>
+                <li class="portfolio__category" data-tag="Gate Installation">Gate Installation</li>
+                <li class="portfolio__category" data-tag="Gazebo Installation">Gazebo Installation</li>
+            </ul>
+
+            <ul class="portfolio__list">
+
+            </ul>
+
+            <button class="red-button red-button__gallery">Gallery</button>
+        </div>
+    </div>
+
+    <div class="section owner">
+        <div class="owner__photo">
+            <img src="../../media/hero/author.png" alt="author">
+        </div>
+        <div class="owner__info">
+            <div>
+                <h2>Meet <span class="red">the owner</span></h2>
+                <p>
+                    With over 20 years of experience in Residential Construction, Remodelling, and Construction Project
+                    Management, I am your go-to expert for quality craftsmanship and successful projects. My commitment
+                    to
+                    transparent communication and client satisfaction is unwavering.
+                    <br>
+                    <br>
+                    I hold a $2 million insurance policy, ensuring your peace of mind while we bring your vision to
+                    life.
+                    Let's collaborate and make your construction dreams a reality today.
+                </p>
+            </div>
+            <img src="../../media/author-sign.png" alt="author-sign">
+            <button class="quoteBtn hero__button hero__button_quote">GET A FREE QUOTE</button>
+        </div>
+    </div>
+
+    <div class="section process">
+        <div class="section__header">
+            <h2 class="section__title">Our <span class="red">process</span></h2>
+        </div>
+
+        <ul class="process__list">
+            <li class="process__item">
+                <img src="../../media/process/1.png" alt="process-icon">
+                <p>Free consultation</p>
+            </li>
+            <li class="process__item">
+                <img src="../../media/process/2.png" alt="process-icon">
+                <p>Free inspection</p>
+            </li>
+            <li class="process__item">
+                <img src="../../media/process/3.png" alt="process-icon">
+                <p>Proposal and estimate</p>
+            </li>
+            <li class="process__item">
+                <img src="../../media/process/4.png" alt="process-icon">
+                <p>Material selection</p>
+            </li>
+            <li class="process__item">
+                <img src="../../media/process/5.png" alt="process-icon">
+                <p>Installation</p>
+            </li>
+            <li class="process__item">
+                <img src="../../media/process/6.png" alt="process-icon">
+                <p>Final inspection and walkthrough</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section faq">
+        <div class="section__header">
+            <h2 class="section__title">Frequently asked <span class="red">questions</span></h2>
+        </div>
+
+        <ul class="faq__list">
+            <li class="faq__item active">
+                <div class="top">
+                    <p class="faq__question">What should the customer know about your pricing?
+                    </p>
+                    <img src="../../media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">We bid projects either on a time and materials basis, but more often a
+                        lump-sum bid.
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">Are you licensed and insured?</p>
+                    <img src="../../media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        We have worked for Real Estate Investment companies, Commercial construction,
+                        Multi-Family, and single Residential construction companies.
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">What advice would you give a customer looking to hire a provider in your
+                        area of work?</p>
+                    <img src="../../media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        Never pay more than 50% upfront, 25% to start depending on cost of job is
+                        sufficient most of the time. Sign a contract with contractor. If your hunch or intuition tells
+                        you something about a contractor intially, it's probably correct.
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">
+                        What questions should customers think through before talking to
+                        professionals about their project?
+                    </p>
+                    <img src="../../media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        What is their budget and desired timeline
+                        Are they willing to make design changes if items are unavailable
+                        How do I want the contractor to enter/exit my home and what do they do for dust control
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">
+                        Do you provide warranty for your materials?
+                    </p>
+                    <img src="../../media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        yes. anser here..
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="section choose">
+        <div class="choose__content">
+            <h2 class="section__title">Why <span class="red">choose me</span></h2>
+            <p class="choose__copy">
+                We are one of Denver's most respected contractors, with over 20 years of invaluable experience. Picking
+                us means picking a group
+                that can make your wildest dreams come true, whether it's a strong, dependable roof, a gorgeous room
+                makeover, or the ideal fence. Our specialization is realizing your dreams, and we take great
+                satisfaction in consistently producing outcomes that go above and beyond. Count on us to approach every
+                assignment with knowledge, accuracy, and originality.
+            </p>
+            <button class="quoteBtn red-button">Get a free quote</button>
+        </div>
+
+        <div class="choose__thumbnail">
+            <img src="../../media/hero/author.png" alt="author-photo">
+        </div>
+    </div>
+
+    <div class="section nextdoor">
+        <div class="nextdoor__title">
+            <a href="https://nextdoor.com/pages/rdm-construction-denver-co">
+                <img src="../../media/nextdoor-logo.svg" alt="nextdoor-logo">
+            </a>
+            <h2>About us</h2>
+        </div>
+        <img class="quote-icon" src="../../media/quote.svg" alt="quote">
+        <p class="nextdoor__review">
+            Denver locals highly recommend RDM Construction for all handyman and general contractor needs. Rick Miller,
+            the owner, is praised for his professionalism, reliability, and creativity. He is known for his high-quality
+            craftsmanship and excellent communication skills.. <a class="excerpt__link"
+                href="https://nextdoor.com/pages/rdm-construction-denver-co">read more</a>
+        </p>
+    </div>
+
+    <div class="section areas">
+        <div class="areas__content">
+            <h2 class="section__title areas__title">Service <span class="red">areas</span></h2>
+
+            <ul class="areas__list">
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Denver</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Colorado Springs</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Aurora</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Fort Collins</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Boulder</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Lakewood</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Thornton</p>
+                    </a>
+                </li>
+
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Arvada</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Westminster</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Centennial</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Littleton</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Pueblo</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Parker</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Greeley</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Longmont</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Loveland</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Broomfield</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Grand Junction</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Castle Rock</p>
+                    </a>
+                </li>
+
+                <li class="areas__area">
+                    <a href="#">
+                        <img src="../../media/pin.svg" alt="pin-icon">
+                        <p>Commerce City</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="areas__map">
+            <iframe class="areas__google-maps"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1Tgxgw0pM0a4pksc_GMbVTgTVpI_WRSg&ehbc=2E312F"
+                width="100%" height="860px" allowfullscreen=""
+                style="padding: 0 !important; border: none; margin-top: -150px;" loading="lazy"
+                frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div class="section action">
+        <h2 class="action__title">Need a <span class="red">handyman?</span></h2>
+        <form id="quote-form" class="action__form">
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Name" name="name" />
+                <img src="../../media/icons/user.png" width="32" alt="field-icon">
+            </div>
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Phone" name="phone" />
+                <img src="../../media/icons/phone-call (5).png" width="32" alt="field-icon">
+            </div>
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Address" name="address" />
+                <img src="../../media/icons/pin.png" width="32" alt="field-icon">
+            </div>
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Message" name="message" />
+                <img src="../../media/icons/email-red.png" width="32" alt="field-icon">
+            </div>
+            <button class="form__field form__field_submit" type="submit" placeholder="submit" name="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <footer class="section footer">
+        <div class="footer__content">
+            <div class="footer__vision">
+                <img src="../../media/logo.png" class="logo footer__logo" alt="logo">
+                <p>
+                    We are the Construction experts you should call when you’re looking for reliable Contracting
+                    Services
+                    in Denver, Colorado and surrounding areas.
+                </p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__nav-block footer__links">
+                    <h3>Qick Links</h3>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">reviews</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-block footer__services">
+                    <h3>our services</h3>
+                    <ul>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Landscaping</a></li>
+                        <li><a href="#">Remodelling</a></li>
+                        <li><a href="#">Roofing</a></li>
+                        <li><a href="#">Flooring</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-block footer__contact">
+                    <h3>Contact us</h3>
+                    <ul>
+                        <li><a href="tel:303 909-7719">
+                                <img src="../../media/footer/phone.svg" width="24" alt="phone-icon">
+                                <span>303 909-7719</span>
+                            </a></li>
+                        <li><a href="mailTo:rickmillerdenver@comcast.net">
+                                <img src="../../media/footer/mail.svg" width="24" alt="mail-icon">
+                                <span>rickmillerdenver@comcast.net</span>
+                            </a></li>
+                        <li>
+                            <img src="../../media/footer/clock.svg" width="24" alt="clock-icon">
+                            <span>Monday – Saturday</span>
+                        </li>
+                        <li>
+                            <img src="../../media/footer/pin.svg" width="24" alt="pin-icon">
+                            <span>Denver, Colorado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© All rights reserved – RDM Construction Colorado, LLC 2023</p>
+            <p>Proudly Designed with ❤️ by <a href="https://fencecontractor.agency">Fence Contractor Agency</a></p>
+        </div>
+    </footer>
+    <!-- Footer end  -->
+</body>
+
+</html>

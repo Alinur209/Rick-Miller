@@ -26,3 +26,25 @@
     color: #fff;
     font-weight: 200;
 }
+
+@media (max-width: 868px) {
+    .nextdoor__review {
+        font-size: 16px;
+    }
+
+    .section.nextdoor {
+		padding: 5vw 3vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .section.nextdoor {
+        grid-template-columns: 1fr;
+        gap: 0;
+		padding: 24px 6px;
+    }
+
+    .nextdoor .quote-icon {
+        width: 100px;
+    }
+}

@@ -18,3 +18,23 @@
     background-color: #595959;
     color: #fff;
 }
+.action__form .form__field::placeholder {
+    color: #aeaeae;
+}
+.action__form .field-wrapper {
+    background-color: #595959;
+}
+
+@media (max-width: 868px) {
+    .action__form {
+        grid-template-columns: 1fr;
+    }
+
+    .action__title {
+        font-size: 32px;
+    }
+
+    .section.action {
+		padding: 5vw 3vw;
+    }
+}   

@@ -9,10 +9,37 @@
 .badges__list {
     width: 100%;
     justify-content: center;
-    display: flex;
-    gap: calc(var(--index) * 3);
+    display: flex;  
+    gap: calc(var(--index) * 3);    
     align-items: center;
+    flex-wrap: wrap;
 }
 .badges__list img {
-    width: 150px;
+    width: calc(var(--index) * 6);
+}
+
+@media (max-width: 1200px) {
+    .badges {
+        padding-top: 10vw;
+    }
+}
+@media (max-width: 868px) {
+    .badges {
+        padding: 5vw;
+        padding-top: 10vw;
+    }
+
+    .badges__list img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .badges {
+        padding: 5vw;
+    }
+
+    .badges__list img {
+        width: 100px
+    }
 }

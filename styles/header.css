@@ -8,6 +8,7 @@
 .header__block {
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 /* LEFT  */
@@ -15,7 +16,7 @@
 .header__block_logo {
     justify-content: center;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 .header__block_logo::before {
     content: '';
@@ -46,8 +47,16 @@
     height: 60%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20% 0 5%;
+    padding: 0 15% 0 5%;
     gap: 20px;
+}
+.header__top .header__badge {
+    width: fit-content;
+}
+.header__top .header__badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .header__top_item {
     display: flex;
@@ -96,7 +105,7 @@
     width: 100%;
     height: 100%;
     color: var(--color-black);
-    font-size: 18px;
+    font-size: calc(var(--index) * 0.8);
     text-transform: uppercase;
     text-decoration: none;
     display: flex;
@@ -126,11 +135,11 @@
 
 .header__block_phone {
     position: relative;
+    z-index: 5;
 }
 .header__block.header__block_phone::before {
     content: '';
     position: absolute;
-    z-index:1;
     background: var(--color-red-gradient);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 23% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 23% 100%);   
@@ -167,6 +176,7 @@
 .header__block_phone .typo p {
     text-transform: uppercase;
     font-size: 18px;
+    white-space: nowrap;
 }
 
 .header__block_phone .typo .header__phone {
@@ -175,6 +185,7 @@
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    white-space: nowrap;
 }
 
 /* nav__item_services  */
@@ -211,6 +222,10 @@
 .nav__item_services .services .service:hover {
     background: var(--color-red-hover);
 }
+.nav__item_services .services .service a {
+    all: unset;
+    width: 100%;
+}
 .nav__item_services .services .service img {
     width: 14px;
 }
@@ -246,4 +261,249 @@
 
 .nav__item.nav__item_services:hover .services {
     display: flex;
+}
+
+/* Responsive  */
+
+.burger-btn {
+    display: none;
+    align-items: center;
+    gap: var(--index);
+    cursor: pointer;
+}
+.burger-btn h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.burger-btn img {
+    width: 25px;
+}
+
+@media (max-width: 1396px) {
+    .header__block_phone .typo p {
+        font-size: calc(var(--index) * 0.8);
+    }
+
+    .header__block_phone .typo .header__phone {
+        font-size: calc(var(--index) * 1.2);
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        height: 100px;
+        grid-template-columns: 2fr 3fr 2fr;
+        background-color: var(--color-yellow);
+        position: relative;
+    }
+
+    .header__nav {
+        background-color: var(--color-yellow);
+        position: absolute;
+        top: -1000%;
+        left: 0;
+        right: 0;
+        height: fit-content;
+    }
+
+    .header__nav.active {
+        top: 100%;
+    }
+
+    .burger-btn {
+        display: flex;
+    }
+    
+    .header__block.header__block_center {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* BURGER  */
+
+    .burger-btn.header__block.header__block_center {
+        display: flex;
+    }
+/* 
+    .header__block.header__block_center {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: fit-content;
+        background-color: var(--color-yellow);
+        flex-direction: column;
+        z-index: 3;
+    } */
+
+    .header__top {
+        display: none;
+        background-color: var(--color-yellow);
+        padding: 0 5vw;
+    }
+
+    .header__top_item {
+        font-size: 16px;
+    }
+
+    .header__top_item div {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .header__top .header__badge {
+        width: 150px;
+    }
+
+    /* BURGER CONTENT */
+
+    .header__nav {
+        order: -1;
+        grid-template-columns: 1fr;
+    }
+
+    .nav__item a {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .header__nav .nav__item.nav__item_services {
+        flex-direction: column;
+    }
+
+    .nav__item.nav__item_services .services {
+        width: 100%;
+        position: static;
+    }
+
+    .nav__item_services .services .service {
+        flex-direction: column;
+    }
+
+    .nav__item_services .services .service img {
+        transform: rotate(90deg);
+    }
+
+    .nav__item.nav__item_services .services .service ul {
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav__item_services .services .service a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}   
+
+@media (max-width: 600px) {
+    .header {
+        height: 80px;
+    }
+
+    .header .logo {
+        width: 60px;
+    }
+
+    .header__block.header__block_phone {
+        padding-right: 10px;
+    }
+    
+    .header__block_phone .typo p {
+        font-size: 12px;
+    }
+
+    .header__block_phone .typo .header__phone {
+        font-size: 16px;
+    }
+
+    .header__block_phone a {
+        gap: 10px;
+    }
+
+    .header__block_phone .icon {
+        width: 36px;
+        height: 36px;
+        border: none;
+    }    
+
+    .header__top .header__badge img {
+        width: 150px;
+    }
+
+    .header__top {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .nav__item a {
+        font-size: 16px;
+    }
+
+    .nav__item.nav__item_services .services .service ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header__block.header__block_phone {
+        padding-right: 6px;
+    }
+
+    .burger-btn {
+        gap: 10px;
+    }
+
+    .burger-btn h3 {
+        font-size: 16px;
+    }
+
+    .burger-btn img {
+        width: 30px;
+    }
+
+    .header__block.header__block_phone::before {
+        left: -20%;
+    }
+}
+
+@media (max-width: 360px) {
+    .header .logo {
+        width: 50px;
+    }
+
+    .burger-btn img {
+        width: 30px;
+    }
+
+    .burger-btn h3 {
+        font-size: 14px;
+    }
+    
+    .header__block_phone .typo p {
+        font-size: 10px;
+    }
+
+    .header__block_phone .typo .header__phone {
+        font-size: 14px;
+    }
+
+    .header__block.header__block_phone {
+        padding-right: 2px;
+    }
+
+    .header__block_phone .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header__block.header__block_phone::before {
+        /* left: -15%; */
+    }
 }

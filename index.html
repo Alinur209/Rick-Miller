@@ -15,6 +15,8 @@
     <script defer src="script/slider.js"></script>
     <script defer src="script/form.js"></script>
     <script defer src="script/portolio.js"></script>
+    <script defer src="script/faq.js"></script>
+
 </head>
 
 <body>
@@ -40,10 +42,22 @@
                 <span class="closeBtn">&times;</span>
             </div>
             <form id="quote-form" class="modal__form">
-                <input class="form__field" placeholder="Name" name="name" />
-                <input class="form__field" placeholder="Phone" name="phone" />
-                <input class="form__field" placeholder="Address" name="address" />
-                <input class="form__field" placeholder="Message" name="message" />
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Name" name="name" />
+                    <img src="media/icons/user.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Phone" name="phone" />
+                    <img src="media/icons/phone-call (5).png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Address" name="address" />
+                    <img src="media/icons/pin.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Message" name="message" />
+                    <img src="media/icons/email-red.png" width="32" alt="field-icon">
+                </div>
                 <button class="form__field form__field_submit" type="submit" name="submit">Submit</button>
             </form>
         </div>
@@ -53,6 +67,7 @@
         <div class="header__block header__block_logo">
             <img src="media/logo.png" class="logo logo__header" alt="logo">
         </div>
+        
         <div class="header__block header__block_center">
             <div class="header__top">
                 <a href="mailto:rickmillerdenver@comcast.net" class="header__top_item header__email">
@@ -61,46 +76,68 @@
                     </div>
                     <p>rickmillerdenver@comcast.net</p>
                 </a>
-                <a class="header__top_item header__quote">
-                    <div>
-                        <img src="media/icons/quote.svg" alt="quote-icon">
-                    </div>
-                    <p>Free quote</p>
+                <a class="header__badge" href="#">
+                    <img src="media/trust-badges/accredited-badge.svg" alt="trust-badge">
                 </a>
             </div>
+
+            <div class="burger-btn">
+                <h3>Menu</h3>
+                <img class="header__burger-icon" src="media/header/burger.png" width="100" alt="burger">
+            </div>
+
             <ul class="header__nav nav">
                 <li class="nav__item active" data-anchor="hero"><a href="#">Home</a></li>
                 <li class="nav__item" data-anchor="owner"><a href="#">About</a></li>
-                <li class="nav__item nav__item_services" data-anchor="services">
-                    <a href="#">
+                <li class="nav__item nav__item_services">
+                    <a href="#" class="nav__item" data-anchor="services">
                         Services
                         <img src="media/icons/down-arrow.svg" alt="arrow-down-icon">
                     </a>
 
                     <ul class="services">
                         <li class="service">
-                            Installation
-                            <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            <a href="pages/installation/Installation.html">
+                                Fence & Gate
+                                <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            </a>
 
                             <ul>
                                 <li class="service"><a href="#">Fence installation</a></li>
                                 <li class="service"><a href="#">Gate installation</a></li>
-                                <li class="service"><a href="#">Gazebo installation</a></li>
                             </ul>
                         </li>
                         <li class="service">
-                            Landscaping
-                            <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            <a href="pages/outdoor/outdoor.html">
+                                Outdoor Design
+                                <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            </a>
 
                             <ul>
-                                <li class="service"><a href="#">Patio installation</a><</li>
-                                <li class="service"><a href="#">Garden design</a><</li>
-                                <li class="service"><a href="#">Hardscaping</a><</li>
+                                <li class="service"><a href="#">Patio</a></li>
+                                <li class="service"><a href="#">Garden</a></li>
+                                <li class="service"><a href="#">Gazebo</a></li>
+                                <li class="service"><a href="#">Porch</a></li>
+                                <li class="service"><a href="#">Pergola</a></li>
+                                <li class="service"><a href="#">Arbors</a></li>
                             </ul>
                         </li>
                         <li class="service">
-                            Roofing
-                            <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            <a href="pages/landscaping/landscaping.html">
+                                Landscaping
+                                <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            </a>
+
+                            <ul>
+                                <li class="service"><a href="#">Garden Design</a></li>
+                                <li class="service"><a href="#">Hard Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="service">
+                            <a href="pages/roofing/roofing.html">
+                                Roofing
+                                <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            </a>
 
                             <ul>
                                 <li class="service"><a href="#">Roof installation</a></li>
@@ -109,8 +146,10 @@
                             </ul>
                         </li>
                         <li class="service">
-                            Flooring
-                            <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            <a href="#">
+                                Flooring
+                                <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            </a>
 
                             <ul>
                                 <li class="service"><a href="#">Floor installation</a></li>
@@ -119,14 +158,16 @@
                             </ul>
                         </li>
                         <li class="service">
-                            Remodeling
-                            <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            <a href="pages/remodelling/remodelling.html">
+                                Remodelling
+                                <img src="media/icons/white-arrow.png" alt="arrow-right-icon">
+                            </a>
 
                             <ul>
-                                <li class="service"><a href="#">Bathroom Remodeling</a></li>
-                                <li class="service"><a href="#">Kitchen Remodeling</a></li>
-                                <li class="service"><a href="#">Room Remodeling</a></li>
-                                <li class="service"><a href="#">Closet Remodeling</a></li>
+                                <li class="service"><a href="#">Bathroom Remodelling</a></li>
+                                <li class="service"><a href="#">Kitchen Remodelling</a></li>
+                                <li class="service"><a href="#">Room Remodelling</a></li>
+                                <li class="service"><a href="#">Closet Remodelling</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -136,6 +177,7 @@
                 <li class="nav__item" data-anchor="footer"><a href="#">Contact</a></li>
             </ul>
         </div>
+
         <div class="header__block header__block_phone">
             <a href="tel:(303) 909-7719">
                 <div class="icon">
@@ -153,7 +195,7 @@
         <div class="hero__content">
             <div class="hero__typo">
                 <div class="hero__typo_text">
-                    <h1 class="hero__meta-tag">#1 Top Rated General Contractor in denver, Colorado</h1>
+                    <h1 class="hero__meta-tag">#1 Top Rated General Contractor in denver</h1>
                     <h2 class="hero__headline">we build anything <br> <span class="red">you can dream of</span></h2>
                     <h3 class="hero__sub-headline">Tested by tme & Trusted by people</h3>
                     <p class="hero__description">
@@ -193,52 +235,76 @@
                         SERVICES</button>
                 </div>
             </div>
-            <div class="hero__media">
-                <div class="hero__author">
-                    <div class="hero__author_description-box">
-                        <img class="author__photo" src="media/hero/author.png" alt="author-photo">
-                        <div class="author-box-description">
-                            <img src="media/hero/author-icon.svg" width="120" alt="author__icon" class="author__icon">
 
-                            <h3 class="author__name">Rick miller - owner</h3>
-                            <p class="author__vision">
-                                I am passionate about high quality craftsmanship and enjoy sharing the satisfaction of a
-                                job
-                                well done with my clients.
-                            </p>
-                            <img class="author-sign" src="media/hero/author-sign.svg" alt="author-sign">
+            <div class="hero__author">
+                <div class="hero__author_description-box">
+                    <img class="author__photo" src="media/hero/author.png" alt="author-photo">
+                    <div class="author-box-description">
+                        <img src="media/hero/author-icon.png" width="120" alt="author__icon" class="author__icon">
+
+                        <h3 class="author__name">Rick miller - owner</h3>
+                        <p class="author__vision">
+                            I am passionate about high quality craftsmanship and enjoy sharing the satisfaction of a
+                            job
+                            well done with my clients.
+                        </p>
+                        <img class="author-sign" src="media/author-sign.png" alt="author-sign">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__portfolio">
+                <img class="red-arrow red-arrow_up" src="media/icons/red-arrow.svg" alt="red-arrow">
+
+                <div class="swiper swiper_hero vertical">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/4.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/2.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/3.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/4.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/gazebo.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/9.webp" alt="red-arrow">
                         </div>
                     </div>
                 </div>
 
-                <div class="hero__portfolio">
-                    <img class="red-arrow red-arrow_up" src="media/icons/red-arrow.svg" alt="red-arrow">
-
-                    <div class="swiper swiper_hero">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="media/portfolio/Installation/4.webp" alt="red-arrow">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="media/portfolio/Installation/2.webp" alt="red-arrow">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="media/portfolio/Installation/3.webp" alt="red-arrow">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="media/portfolio/Installation/4.webp" alt="red-arrow">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="media/portfolio/Installation/gazebo.webp" alt="red-arrow">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="media/portfolio/Installation/9.webp" alt="red-arrow">
-                            </div>
+                <div class="swiper swiper_hero horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/4.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/2.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/3.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/4.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/gazebo.webp" alt="red-arrow">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="media/portfolio/Installation/9.webp" alt="red-arrow">
                         </div>
                     </div>
-
-                    <img class="red-arrow red-arrow_down" src="media/icons/red-arrow.svg" alt="red-arrow">
                 </div>
+
+                <img class="red-arrow red-arrow_down" src="media/icons/red-arrow.svg" alt="red-arrow">
+
+                <div class="swiper-pagination hero-swiper-pagination"></div>
             </div>
         </div>
 
@@ -247,10 +313,22 @@
                 <h2>Book a free estimate now!</h2>
             </div>
             <form id="quote-form">
-                <input class="form__field" placeholder="Name" name="name" />
-                <input class="form__field" placeholder="Phone" name="phone" />
-                <input class="form__field" placeholder="Address" name="address" />
-                <input class="form__field" placeholder="Message" name="message" />
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Name" name="name" />
+                    <img src="media/icons/user.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Phone" name="phone" />
+                    <img src="media/icons/phone-call (5).png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Address" name="address" />
+                    <img src="media/icons/pin.png" width="32" alt="field-icon">
+                </div>
+                <div class="field-wrapper">
+                    <input class="form__field" placeholder="Message" name="message" />
+                    <img src="media/icons/email-red.png" width="32" alt="field-icon">
+                </div>
                 <button class="form__field form__field_submit" type="submit" name="submit">Submit</button>
             </form>
         </div>
@@ -258,12 +336,12 @@
 
     <div class="badges">
         <div class="badges__list">
-            <img src="media/trust-badges/accredited-badge.svg" alt="trust-badge">
             <img src="media/trust-badges/quality.svg" alt="trust-badge">
             <img src="media/trust-badges/insurance.svg" alt="trust-badge">
             <img src="media/trust-badges/experience.svg" alt="trust-badge">
             <img src="media/trust-badges/certainteed.svg" alt="trust-badge">
             <img src="media/trust-badges/thumbstack.svg" alt="trust-badge">
+            <img src="media/trust-badges/nextdoor.svg" alt="trust-badge">
         </div>
     </div>
 
@@ -434,10 +512,12 @@
             </div>
 
             <img class="review__arrow review__arrow_right" src="media/icons/red-arrow.svg" alt="right-arrow">
+
+            <div class="swiper-pagination review-swiper-pagination"></div>
         </div>
     </div>
 
-    <div id="owner" class="section owner">
+    <div class="section owner">
         <div class="owner__photo">
             <img src="media/hero/author.png" alt="author">
         </div>
@@ -445,8 +525,8 @@
             <div>
                 <h2>Meet <span class="red">the owner</span></h2>
                 <p>
-                    With over 20 years of experience in Residential Construction, Remodeling, and Construction Project
-                    Management, I am your go-to expert for quality craftsmanship and successful projects. My commitment
+                    With over 20 years of experience in Residential Construction, I am your go-to expert for quality
+                    craftsmanship and successful projects. My commitment
                     to
                     transparent communication and client satisfaction is unwavering.
                     <br>
@@ -469,13 +549,12 @@
 
         <ul class="services__list">
             <li style="background-image: url(media/services/fencing.png);" class="service__item">
-                <a href="#">
+                <a href="pages/installation/Installation.html">
                     <div class="left">
-                        <h3 class="service__name">Installation</h3>
+                        <h3 class="service__name">Fence & Gate Installation</h3>
                         <ul class="sub-services-list">
                             <li>- Fence Installation</li>
                             <li>- Gate Installation</li>
-                            <li>- Gazebo Installation</li>
                         </ul>
                     </div>
                     <button class="red-button">Details</button>
@@ -483,11 +562,26 @@
             </li>
 
             <li style="background-image: url(media/services/outdoor.png);" class="service__item">
-                <a href="#">
+                <a href="pages/outdoor/outdoor.html">
                     <div class="left">
-                        <h3 class="service__name">Outdoor Landscaping</h3>
+                        <h3 class="service__name">Outdoor design</h3>
                         <ul class="sub-services-list">
-                            <li>- Patio Installation</li>
+                            <li>- Patio</li>
+                            <li>- Gazebo</li>
+                            <li>- Porch</li>
+                            <li>- Pergola</li>
+                            <li>- Arbors</li>
+                        </ul>
+                    </div>
+                    <button class="red-button">Details</button>
+                </a>
+            </li>
+
+            <li style="background-image: url(media/services/landscaping.webp);" class="service__item">
+                <a href="pages/landscaping/landscaping.html">
+                    <div class="left">
+                        <h3 class="service__name">Landscaping</h3>
+                        <ul class="sub-services-list">
                             <li>- Garden Design</li>
                             <li>- Hardscaping</li>
                         </ul>
@@ -496,14 +590,28 @@
                 </a>
             </li>
 
+            <li style="background-image: url(media/services/room.png);" class="service__item">
+                <a href="pages/remodelling/remodelling.html">
+                    <div class="left">
+                        <h3 class="service__name">Remodelling</h3>
+                        <ul class="sub-services-list">
+                            <li>- Bathroom Remodelling</li>
+                            <li>- Kitchen Remodelling</li>
+                            <li>- Room Remodelling</li>
+                            <li>- Closet Remodelling</li>
+                        </ul>
+                    </div>
+                    <button class="red-button">Details</button>
+                </a>
+            </li>
+
             <li style="background-image: url(media/services/roofing.png);" class="service__item">
-                <a href="#">
+                <a href="pages/roofing/roofing.html">
                     <div class="left">
                         <h3 class="service__name">Roofing</h3>
                         <ul class="sub-services-list">
                             <li>- Roof Installation</li>
                             <li>- Roof Repair</li>
-                            <li>- Roof Maintenance</li>
                         </ul>
                     </div>
                     <button class="red-button">Details</button>
@@ -518,35 +626,6 @@
                             <li>- Floor Installation</li>
                             <li>- Floor Repair</li>
                             <li>- Floor Refinishing</li>
-                        </ul>
-                    </div>
-                    <button class="red-button">Details</button>
-                </a>
-            </li>
-
-            <li style="background-image: url(media/services/room.png);" class="service__item">
-                <a href="#">
-                    <div class="left">
-                        <h3 class="service__name">Remodeling</h3>
-                        <ul class="sub-services-list">
-                            <li>- Bathroom Remodeling</li>
-                            <li>- Kitchen Remodeling</li>
-                            <li>- Room Remodeling</li>
-                            <li>- Closet Remodeling</li>
-                        </ul>
-                    </div>
-                    <button class="red-button">Details</button>
-                </a>
-            </li>
-
-            <li style="background-image: url(media/services/handyman.jpg);" class="service__item">
-                <a href="#">
-                    <div class="left">
-                        <h3 class="service__name">Handyman Services</h3>
-                        <ul class="sub-services-list">
-                            <li>- General Repairs</li>
-                            <li>- Maintenance</li>
-                            <li>- Home Improvement</li>
                         </ul>
                     </div>
                     <button class="red-button">Details</button>
@@ -569,7 +648,7 @@
                 <li class="portfolio__category" data-category="Landscaping">Landscaping</li>
                 <li class="portfolio__category" data-category="Roofing">Roofing</li>
                 <li class="portfolio__category" data-category="Flooring">Flooring</li>
-                <li class="portfolio__category" data-category="Remodeling">Remodeling</li>
+                <li class="portfolio__category" data-category="Remodelling">Remodelling</li>
             </ul>
 
             <ul class="portfolio__list">
@@ -577,6 +656,139 @@
             </ul>
 
             <button class="red-button red-button__gallery">Gallery</button>
+        </div>
+    </div>
+
+    <div class="section process">
+        <div class="section__header">
+            <h2 class="section__title">Our <span class="red">process</span></h2>
+        </div>
+
+        <ul class="process__list">
+            <li class="process__item">
+                <img src="media/process/1.png" alt="process-icon">
+                <p>Free consultation</p>
+            </li>
+            <li class="process__item">
+                <img src="media/process/2.png" alt="process-icon">
+                <p>Free inspection</p>
+            </li>
+            <li class="process__item">
+                <img src="media/process/3.png" alt="process-icon">
+                <p>Proposal and estimate</p>
+            </li>
+            <li class="process__item">
+                <img src="media/process/4.png" alt="process-icon">
+                <p>Material selection</p>
+            </li>
+            <li class="process__item">
+                <img src="media/process/5.png" alt="process-icon">
+                <p>Installation</p>
+            </li>
+            <li class="process__item">
+                <img src="media/process/6.png" alt="process-icon">
+                <p>Final inspection and walkthrough</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section faq">
+        <div class="section__header">
+            <h2 class="section__title">Frequently asked <span class="red">questions</span></h2>
+        </div>
+
+        <ul class="faq__list">
+            <li class="faq__item active">
+                <div class="top">
+                    <p class="faq__question">What should the customer know about your pricing?
+                    </p>
+                    <img src="media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">We bid projects either on a time and materials basis, but more often a
+                        lump-sum bid.
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">Are you licensed and insured?</p>
+                    <img src="media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        We have worked for Real Estate Investment companies, Commercial construction,
+                        Multi-Family, and single Residential construction companies.
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">What advice would you give a customer looking to hire a provider in your
+                        area of work?</p>
+                    <img src="media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        Never pay more than 50% upfront, 25% to start depending on cost of job is
+                        sufficient most of the time. Sign a contract with contractor. If your hunch or intuition tells
+                        you something about a contractor intially, it's probably correct.
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">
+                        What questions should customers think through before talking to
+                        professionals about their project?
+                    </p>
+                    <img src="media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        What is their budget and desired timeline
+                        Are they willing to make design changes if items are unavailable
+                        How do I want the contractor to enter/exit my home and what do they do for dust control
+                    </p>
+                </div>
+            </li>
+
+            <li class="faq__item">
+                <div class="top">
+                    <p class="faq__question">
+                        Do you provide warranty for your materials?
+                    </p>
+                    <img src="media/icons/red-arrow.svg" alt="arrow-icon">
+                </div>
+                <div class="bottom">
+                    <p class="faq__answer">
+                        yes. anser here..
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="section choose">
+        <div class="section choose__content">
+            <h2 class="section__title">Why <span class="red">choose me</span></h2>
+            <p class="choose__copy">
+                We are one of Denver's most respected contractors, with over 20 years of invaluable experience. Picking
+                us means picking a group
+                that can make your wildest dreams come true, whether it's a strong, dependable roof, a gorgeous room
+                makeover, or the ideal fence. Our specialization is realizing your dreams, and we take great
+                satisfaction in consistently producing outcomes that go above and beyond. Count on us to approach every
+                assignment with knowledge, accuracy, and originality.
+            </p>
+            <button class="quoteBtn red-button">Get a free quote</button>
+        </div>
+
+        <div class="choose__thumbnail">
+            <img src="media/hero/author.png" alt="author-photo">
         </div>
     </div>
 
@@ -755,11 +967,24 @@
 
     <div class="section action">
         <h2 class="action__title">Need a <span class="red">handyman?</span></h2>
+
         <form id="quote-form" class="action__form">
-            <input class="form__field" placeholder="Name" name="name" />
-            <input class="form__field" placeholder="Phone" name="phone" />
-            <input class="form__field" placeholder="Address" name="address" />
-            <input class="form__field" placeholder="Message" name="message" />
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Name" name="name" />
+                <img src="media/icons/user.png" width="32" alt="field-icon">
+            </div>
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Phone" name="phone" />
+                <img src="media/icons/phone-call (5).png" width="32" alt="field-icon">
+            </div>
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Address" name="address" />
+                <img src="media/icons/pin.png" width="32" alt="field-icon">
+            </div>
+            <div class="field-wrapper">
+                <input class="form__field" placeholder="Message" name="message" />
+                <img src="media/icons/email-red.png" width="32" alt="field-icon">
+            </div>
             <button class="form__field form__field_submit" type="submit" placeholder="submit" name="submit">
                 Submit
             </button>
@@ -785,7 +1010,7 @@
                         <li><a href="#">Services</a></li>
                         <li><a href="#">reviews</a></li>
                         <li><a href="#">Contacts</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Gallery</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
@@ -794,7 +1019,7 @@
                     <ul>
                         <li><a href="#">Installation</a></li>
                         <li><a href="#">Landscaping</a></li>
-                        <li><a href="#">Remodeling</a></li>
+                        <li><a href="#">Remodelling</a></li>
                         <li><a href="#">Roofing</a></li>
                         <li><a href="#">Flooring</a></li>
                     </ul>
@@ -823,8 +1048,9 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>© All rights reserved – RDM Construction Colorado, LLC 2023</p>
-            <p>Proudly Designed with ❤️ by <a href="https://fencecontractor.agency">Fence Contractor Agency</a></p>
+            <p>RDM Construction Colorado, LLC 2023</p>
+            <p>Proudly Designed with ❤️ by <a href="https://fencecontractor.agency">Fence Contractor Agency.</a> - © All
+                rights reserved</p>
         </div>
     </footer>
 </body>

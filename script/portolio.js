@@ -148,65 +148,66 @@ const data = [
         ]
     },
     {
-        category: "REMODELING",
-        tags: ["Room Remodeling", "Kitchen Remodeling", "Bathroom Remodeling", "Closet Remodeling"],
+        category: "Remodelling",
+        tags: ["Room Remodelling", "Kitchen Remodelling", "Bathroom Remodelling", "Closet Remodelling"],
         list: [
             {
-                url: `media/portfolio/remodeling/room-2.webp`,
-                tag: "Room Remodeling"
+                url: `media/portfolio/remodelling/room-2.webp`,
+                tag: "Room Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/room-5.webp`,
-                tag: "Room Remodeling"
+                url: `media/portfolio/remodelling/room-5.webp`,
+                tag: "Room Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/kitchen-1.webp`,
-                tag: "Kitchen Remodeling"
+                url: `media/portfolio/remodelling/kitchen-1.webp`,
+                tag: "Kitchen Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/kitchen-3.webp`,
-                tag: "Kitchen Remodeling"
+                url: `media/portfolio/remodelling/kitchen-3.webp`,
+                tag: "Kitchen Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/bathroom-1.webp`,
-                tag: "Bathroom Remodeling"
+                url: `media/portfolio/remodelling/bathroom-1.webp`,
+                tag: "Bathroom Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/bathroom-6.webp`,
-                tag: "Bathroom Remodeling"
+                url: `media/portfolio/remodelling/bathroom-6.webp`,
+                tag: "Bathroom Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/closet-1.webp`,
-                tag: "Closet Remodeling"
+                url: `media/portfolio/remodelling/closet-1.webp`,
+                tag: "Closet Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/closet-2.webp`,
-                tag: "Closet Remodeling"
+                url: `media/portfolio/remodelling/closet-2.webp`,
+                tag: "Closet Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/closet-3.webp`,
-                tag: "Closet Remodeling"
+                url: `media/portfolio/remodelling/closet-3.webp`,
+                tag: "Closet Remodelling"
             },
         ]
     },
     {
         category: "All",
+        tags: [],
         list: [
             {
-                url: `media/portfolio/remodeling/room-2.webp`,
-                tag: "Room Remodeling"
+                url: `media/portfolio/remodelling/room-2.webp`,
+                tag: "Room Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/kitchen-3.webp`,
-                tag: "Kitchen Remodeling"
+                url: `media/portfolio/remodelling/kitchen-3.webp`,
+                tag: "Kitchen Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/bathroom-6.webp`,
-                tag: "Bathroom Remodeling"
+                url: `media/portfolio/remodelling/bathroom-6.webp`,
+                tag: "Bathroom Remodelling"
             },
             {
-                url: `media/portfolio/remodeling/closet-1.webp`,
-                tag: "Closet Remodeling"
+                url: `media/portfolio/remodelling/closet-1.webp`,
+                tag: "Closet Remodelling"
             },
             {
                 url: `media/portfolio/installation/3.webp`,
@@ -233,8 +234,11 @@ const data = [
 ]
 
 const portfolioList = document.querySelector(".portfolio__list")
+const serviceTag = portfolioList.getAttribute("data-service-tag")
+const categoryTag = portfolioList.getAttribute("data-service-category")
 const portfolioCategories = document.querySelectorAll(".portfolio__category")
-let activePortfolioCategory = document.querySelector(".portfolio__category.active").getAttribute("data-category")
+let activePortfolioCategory = document.querySelector(".portfolio__category.active")?.getAttribute("data-category")
+let activePortfolioTag = document.querySelector(".portfolio__category.active")?.getAttribute("data-tag")
 
 portfolioCategories.forEach((item, index, array) => {
     item.addEventListener("click", () => {
@@ -242,21 +246,36 @@ portfolioCategories.forEach((item, index, array) => {
 
         item.classList.add("active")
         activePortfolioCategory = item.getAttribute("data-category")
-        renderPortfolio({category: activePortfolioCategory})
+        activePortfolioTag = item.getAttribute("data-tag")
+
+        renderPortfolio({category: activePortfolioCategory, tag: activePortfolioTag})
     })
 })
 
 function renderPortfolio({category, tag}) {
-    console.log(category)
-    const categoryData = data.find(item => item.category.toLowerCase() === category.toLowerCase())
+    const categoryData = data.find(item => item.category.toLowerCase() === category?.toLowerCase() || item.tags?.includes(tag))
+    let list = categoryData?.list || []
+    
+    if(tag) {
+        list = [...list].filter(item => item.tag === tag)
+    }
 
-    console.log({categoryData})
+    if(serviceTag || categoryTag) {
+        if(categoryTag) {
+            list = data.find(item => item.category.toLowerCase() === categoryTag?.toLowerCase()).list
+        }else if(serviceTag) {
+            list = data.find(item => item.tags.includes(serviceTag)).list.filter(item => item.tag === serviceTag)
+        }
+    }
+    
+
+    console.log({categoryData, serviceTag})
 
     portfolioList.innerHTML = ""
-    categoryData.list.forEach(item => {
+    list.forEach(item => {
         portfolioList.appendChild(document.createRange().createContextualFragment(`
             <li class="portfolio__item">
-                <img src="${item.url}" alt="portfolio__item">
+                <img src="${getAbsPath(item.url)}" alt="portfolio__item">
                 <p class="portfolio__tag">${item.tag}</p>
 
                 <div class="layer">
@@ -274,4 +293,16 @@ function renderPortfolio({category, tag}) {
     })
 }   
 
-renderPortfolio({category: activePortfolioCategory})
+renderPortfolio({category: activePortfolioCategory, tag: activePortfolioTag})
+
+function getAbsPath(url) {
+    let abs = ""
+
+    if(serviceTag) {
+        abs = "../../../"
+    }else if(window.location.pathname.includes("pages")) {
+        abs = "../../"
+    }
+
+    return abs + url
+}

@@ -11,6 +11,9 @@
 @import "styles/action-form.css";
 @import "styles/footer.css";
 @import "styles/modal.css";
+@import "styles/process.css";
+@import "styles/faq.css";
+@import "styles/choose	.css";
 
 :root {
 	--index: calc(1vw + 1vh);
@@ -31,12 +34,16 @@
 	font-family: 'Poppins', sans-serif;
 	transition-duration: .2s;
 }
+body {	
+	color: var(--color-black);
+	background-color: #fff;
+}
 body::-webkit-scrollbar {
     display: none;
 	color: var(--color-black);
 }
 .logo {
-    width: 100px;
+    width: calc(var(--index) * 5);
 }
 
 .red {
@@ -46,7 +53,7 @@ body::-webkit-scrollbar {
 .red-button {
 	width: fit-content;
 	cursor: pointer;
-    font-size: 20px;
+    font-size: calc(var(--index) * 0.9);
     padding: 10px calc(var(--index) * 2);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -64,8 +71,6 @@ body::-webkit-scrollbar {
     color: var(--color-yellow);
 	text-decoration: underline;
 }
-
-
 
 /* Section  */
 
@@ -91,3 +96,43 @@ body::-webkit-scrollbar {
 	font-weight: 200;
 }
 
+/* Swiper  */
+
+.swiper {
+	position: relative;
+}
+
+.swiper-pagination {
+	display: none;
+    text-align: center;
+	bottom: 0 !important;
+}
+.swiper-pagination-bullet {
+    background: gray
+}
+.swiper-pagination-bullet-active {
+    background: var(--color-red);
+}
+
+@media (max-width: 868px) {
+	.section {
+		padding: 5vw 3vw;
+	}	
+
+	.section__title {
+		font-size: 32px
+	}
+	
+	.section__sub-title {
+		font-size: 16px
+	}
+}
+@media (max-width: 600px) {
+	.swiper-pagination {
+		display: block;
+	}
+
+	.section {
+		padding: 24px 6px;
+	}
+}

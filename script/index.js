@@ -17,14 +17,16 @@ function closeModal(modal) {
     modal.classList.remove("active")
     document.body.style.overflow = "scroll"
 
-    resetFields()
+    resetFields() 
+}
 
 function resetFields() {
     const allFields = document.querySelectorAll("input")
+    
     allFields.forEach(field => {
         field.value = ""
         field.style.border = "none"
-    })}
+    })
 }
 
 // Quote Modal

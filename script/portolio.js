@@ -4,39 +4,39 @@ const data = [
         tags: ["Fence Installation", "Gate Installation", "Gazebo Installation"],
         list: [
             {
-                url: `media/portfolio/installation/1.webp`,
+                url: `media/portfolio/Installation/1.webp`,
                 tag: "Fence Installation"
             },
             {
-                url: `media/portfolio/installation/2.webp`,
+                url: `media/portfolio/Installation/2.webp`,
                 tag: "Fence Installation"
             },
             {
-                url: `media/portfolio/installation/3.webp`,
+                url: `media/portfolio/Installation/3.webp`,
                 tag: "Fence Installation"
             },
             {
-                url: `media/portfolio/installation/4.webp`,
+                url: `media/portfolio/Installation/4.webp`,
                 tag: "Fence Installation"
             },
             {
-                url: `media/portfolio/installation/5.webp`,
+                url: `media/portfolio/Installation/5.webp`,
                 tag: "Fence Installation"
             },
             {
-                url: `media/portfolio/installation/6.webp`,
+                url: `media/portfolio/Installation/6.webp`,
                 tag: "Fence Installation"
             },
             {
-                url: `media/portfolio/installation/7.webp`,
+                url: `media/portfolio/Installation/7.webp`,
                 tag: "Gate Installation"
             },
             {
-                url: `media/portfolio/installation/8.webp`,
+                url: `media/portfolio/Installation/8.webp`,
                 tag: "Gate Installation"
             },
             {
-                url: `media/portfolio/installation/9.webp`,
+                url: `media/portfolio/Installation/9.webp`,
                 tag: "Gazebo Installation"
             },
         ]
@@ -210,7 +210,7 @@ const data = [
                 tag: "Closet Remodelling"
             },
             {
-                url: `media/portfolio/installation/3.webp`,
+                url: `media/portfolio/Installation/3.webp`,
                 tag: "Fence Installation"
             },
             {

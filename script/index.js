@@ -42,17 +42,17 @@ function openThankModal() {
     openModal(thankModal)
 }
 
-// Media Modal
+// Media Modal 
 
 function openMediaModal(url) {
     const mediaModal = document.querySelector(".modal.modal_media")
     const modalBody = mediaModal.querySelector(".modal__body")
 
-    modalBody.innerHTML = ''
+    modalBody.querySelector("img")?.remove()
     const img = document.createElement("img")
     img.src = url
     img.alt = "media"
-    modalBody.append(img)
+    modalBody.appendChild(img)
     openModal(mediaModal)
 }
 
